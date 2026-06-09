@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Category Rush</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="toast"></div>
+<div id="challengeModal" class="modal hidden"><div class="modalCard"><h2>⚠️ Challenge</h2><p id="challengeText"></p><div class="row"><button id="voteCount">Count It</button><button id="voteReject" class="danger">Reject</button></div><small id="voteNote"></small></div></div>
+<main class="app">
+<header><div><h1>Category Rush</h1><p>Think fast. Score big.</p></div><div class="badge" id="roomBadge">No room</div></header>
+<section id="join" class="card"><input id="name" placeholder="Your name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><button id="create">Create Room</button><div class="joinLine"><input id="code" placeholder="Room code" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false"><button id="joinBtn">Join</button></div></section>
+<section id="game" class="hidden">
+<div class="grid"><section class="card hero"><div class="muted">Random Letter</div><div id="letter">?</div><div id="used">Used letters: none</div><div id="rushCountdown" class="hidden count">5</div><div class="row"><button id="start">Start Round</button><button id="score">Score Now</button><button id="end" class="danger">End Game</button></div></section><section class="card"><h3>Leaderboard</h3><ol id="leader"></ol></section></div>
+<section class="card answers"><h3>Your Answers</h3><label>Name<input data-cat="name" class="ans" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></label><label>Animal<input data-cat="animal" class="ans" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></label><label>Place<input data-cat="place" class="ans" placeholder="City, state, province, region, country" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></label><label>Object<input data-cat="object" class="ans" placeholder="Physical thing you can touch" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></label><button id="rush" class="rush">RUSH! Start 5 second countdown</button></section>
+<section class="card"><h3>Results</h3><div id="results"></div></section>
+<section class="card"><h3>Challenges</h3><div id="challenges"></div></section>
+</section>
+</main><script src="/socket.io/socket.io.js"></script><script src="script.js"></script></body></html>
